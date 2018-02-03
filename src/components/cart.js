@@ -36,6 +36,9 @@ const cartStyle = {
     position: "relative",
     width: "500px",
     "zIndex":2,
+    textAlign: 'center',
+    padding:(5,5,5,5),
+    margin: (5,15,5,15)
 }
 
 class Cart extends Component {

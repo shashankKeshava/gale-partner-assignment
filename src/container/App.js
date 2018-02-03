@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
-         <AppBar title="App"/>
+         <AppBar className="AppBar" title="App"/>
           <Cards items={this.props.data}/>
         </div>
       </MuiThemeProvider>
