@@ -35,8 +35,6 @@ const cartLabel = {
 const cartStyle = {
     position: "relative",
     width: "500px",
-    top: "50px",
-    left:"800px",
     "zIndex":2,
 }
 

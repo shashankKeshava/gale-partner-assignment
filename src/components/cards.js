@@ -14,18 +14,21 @@ import Cart from './cart'
 
 const cardStyle = {
     width: "250px",
-    height: "100%",
     padding: (5, 5, 5, 5),
     margin: (5, 5, 5, 5),
-    order: 4
+    order: 4,
+    display: 'inline-block',
 }
 
 const viewPort = {
     display: "flex",
-    height: "100%",
-    "justifyContent": "space-around",
-    "flexDireaction": "row",
-    "flexWrap": "wrap"
+    justifyContent: 'space-between',
+    "flexDirection": "row",
+    flex: 1,
+}
+
+const cardContainer = {
+    flex: 1,
 }
 
 export default class Cards extends Component {
@@ -69,9 +72,12 @@ export default class Cards extends Component {
     render() {
         return (
             <div style={viewPort}>
-                <Cart/> {this.state.cards.length
-                    ? this.state.cards
-                    : "Loading Items...."}
+                <div style={cardContainer}>
+                    {this.state.cards.length
+                        ? this.state.cards
+                        : "Loading Items...."}
+                </div>
+                <Cart/>
             </div>
         );
     }
