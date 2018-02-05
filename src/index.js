@@ -4,7 +4,6 @@ import './index.css';
 import App from './container/App';
 import registerServiceWorker from './registerServiceWorker';
 
-import {render} from "react-dom";
 import {Provider} from "react-redux";
 import {createStore, applyMiddleware} from "redux";
 import {createLogger} from "redux-logger";

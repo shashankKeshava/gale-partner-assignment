@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import {
     Card,
     CardActions,
-    CardHeader,
     CardMedia,
     CardTitle,
     CardText,
 } from 'material-ui/Card';
 
-import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 
 import Cart from './cart';
+import injectTapEventPlugin from "react-tap-event-plugin";
+injectTapEventPlugin();
 
 const cardStyle = {
     width: '250px',
@@ -46,7 +47,9 @@ export default class Cards extends Component {
             cards: [],
         };
     }
-
+    __handleAddToCart=(item)=>{
+        console.log('clicked',item)
+    }
     __generateCards = () => {
         const list = this.props.items.map(item => {
             return (
@@ -60,8 +63,7 @@ export default class Cards extends Component {
                     />
                     <CardText>{item.price}</CardText>
                     <CardActions>
-                        <FlatButton label="Action1" />
-                        <FlatButton label="Action2" />
+                        <RaisedButton label={"Add to Cart"} primary={true} onTouchTap={this.__handleAddToCart(item)}/>
                     </CardActions>
                 </Card>
             );

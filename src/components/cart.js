@@ -62,8 +62,8 @@ class Cart extends Component {
                     </TableHeader>
                     <TableBody displayRowCheckbox={false}>
                         <TableRow>
-                            <TableRowColumn>John Smith</TableRowColumn>
-                            <TableRowColumn>Employed</TableRowColumn>
+                            <TableRowColumn>{1}</TableRowColumn>
+                            <TableRowColumn>{"INR 100"}</TableRowColumn>
                         </TableRow>
                     </TableBody>
                 </Table>
